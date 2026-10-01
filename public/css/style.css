@@ -42,3 +42,13 @@
 .sound-toggle{display:block;margin:0 auto 8px}
 .remember-login{display:flex!important;flex-direction:row!important;align-items:center;gap:8px}
 .remember-login input{width:auto;accent-color:#c98861}
+
+/* Keep native iOS date pickers inside the form and make report controls wrap. */
+.card,.form,.two,.two>label,.form label{min-width:0}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.form input,.form select,.report-controls input{min-width:0;max-width:100%;box-sizing:border-box}
+input[type="date"],input[type="month"],input[type="time"]{min-width:0;max-width:100%}
+.report-head{align-items:flex-start;gap:12px;flex-wrap:wrap}
+.report-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));flex:1 1 290px;min-width:0;max-width:100%}
+.report-controls button{grid-column:1/-1;min-height:40px;white-space:normal}
+@media(max-width:600px){.two{grid-template-columns:minmax(0,1fr)}.report-head{display:block}.report-controls{margin-top:12px;width:100%;grid-template-columns:repeat(2,minmax(0,1fr))}.report-controls input{padding:10px 6px;font-size:13px}}
